@@ -10,6 +10,9 @@ public class Test2 extends BaseClass {
         driver.manage().window().maximize();
         driver.get("https://demoqa.com/automation-practice-form");
         enterContactForm();
+        driver.quit();
+
+
 
 
     }
@@ -19,11 +22,13 @@ public class Test2 extends BaseClass {
         By inputNameLocator = By.id("firstName");
         By inputEmailLocator = By.id("userEmail");
         By inputMobileLocator = By.id("userNumber");
-//        By inputSubjects = By.className("subjects-auto-complete__control css-yk16xz-control");
+        By inputSubjects = By.id("subjectsInput");
         driver.findElement(inputNameLocator).sendKeys(user.getName());
         driver.findElement(inputEmailLocator).sendKeys(user.getEmail());
         driver.findElement(inputMobileLocator).sendKeys(user.getMobile());
-//        driver.findElement(inputSubjects).sendKeys(user.getSubjects());
+        driver.findElement(inputSubjects).sendKeys(user.getSubjects());
+
+
 
 
 
